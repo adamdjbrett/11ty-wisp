@@ -1,0 +1,19 @@
+---
+layout: blog.njk
+title: Blog
+description: "Update from my blogs"
+pagination:
+  data: collections.posts
+  size: 10
+  reverse: true
+testdata:
+ - item1
+ - item2
+permalink: "blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
+---
+{%- for item in pagination.items %}
+<h3><a href="{{item.url}}">{{item.data.title}}</a></h3>
+<p{{item.data.description}}</p>
+<p>on {% if page.date %}on <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time><br/>{% endif %}</p>
+<hr/>
+{% endfor -%}

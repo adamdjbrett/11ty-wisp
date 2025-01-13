@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="{{ metadata.language }}">
+<head>
+{% include "partials/seo.njk" %}
+</head>
+<body>
+<a href="#skip" class="visually-hidden">Skip to main content</a>
+{{content|safe}}
+<hr/>
+<footer class="container">
+<p><em>Built with <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a></em> {{metadata.footer.text1}} <a  href="{{metadata.footer.text2_link}}">{{metadata.footer.text2}}</a></p>
+</footer>
+{%- js %}{% include "public/js/lamp.js" %}{% endjs %}
+{%- js %}{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}{% endjs %}
+<script type="module" src="{% getBundleFileUrl "js" %}"></script>
+</body>
+</html>

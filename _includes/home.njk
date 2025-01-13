@@ -1,0 +1,17 @@
+---
+layout: base.njk
+---
+{% include "partials/nav.njk" %}
+<main class="p-5" id="skip">
+<header class="container">
+<hgroup>
+<h1><a href="{{page.url}}">{{title or metadata.title}}</a></h1>
+<h2>{{description or metadata.description}}</h2>
+</hgroup>
+</header><hr/>
+<div class="container snls snts">
+<heading-anchors>
+{{ content | safe }}
+</heading-anchors>
+</div>
+</main>

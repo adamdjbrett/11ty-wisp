@@ -1,0 +1,22 @@
+---
+layout: base.njk
+---
+{% include "partials/nav_blog.njk" %}
+<main class="p-5" id="skip">
+<header class="container">
+<hgroup>
+<h1><a href="{{page.url}}">{{title or metadata.title}}</a></h1>
+<h2><small>{{description or metadata.description}}</small></h2>
+</hgroup>
+</header><hr/>
+<div class="container">
+{% if page.date %}<p><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></p>{% endif %}
+<p>{%- for tag in tags | filterTagList %}{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+{% if tag %}<a href="{{ tagUrl }}"><small>{{ tag }}</small></a> {%- if not loop.last %} ,{% endif %}{% endif %}	{%- endfor %}</p>
+</div>
+<div class="container snls snts">
+<heading-anchors>
+{{ content | safe }}
+</heading-anchors>
+</div>
+</main>
