@@ -17,6 +17,8 @@ navbar:
    link: "/docs/"
  - nav: "Blog" 
    link: "/blog/"
+ - nav: "Contact" 
+   link: "/doc/11-help/"
  - nav: "Search" 
    link: "/search/"
 footer: 

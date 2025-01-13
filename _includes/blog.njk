@@ -10,7 +10,6 @@ layout: base.njk
 </hgroup>
 </header><hr/>
 <div class="container">
-{% if page.date %}<p><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></p>{% endif %}
 <p>{%- for tag in tags | filterTagList %}{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
 {% if tag %}<a href="{{ tagUrl }}"><small>{{ tag }}</small></a> {%- if not loop.last %} ,{% endif %}{% endif %}	{%- endfor %}</p>
 </div>
