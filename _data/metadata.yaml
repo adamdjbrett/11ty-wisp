@@ -1,0 +1,31 @@
+title: "11ty WISP"
+description: "Project By Adam Dj Brett"
+favicon: "https://camo.githubusercontent.com/26b4a1ad5472f55580b7046fde2e3345a79987ba0e6fd4fdbe59408688fe9561/68747470733a2f2f7777772e6164616d646a62726574742e636f6d2f6173736574732f696d672f6c6f676f2e706e67"
+image: "https://camo.githubusercontent.com/26b4a1ad5472f55580b7046fde2e3345a79987ba0e6fd4fdbe59408688fe9561/68747470733a2f2f7777772e6164616d646a62726574742e636f6d2f6173736574732f696d672f6c6f676f2e706e67"
+language: "en"
+locale: "en_US"
+url: "http://localhost:8080"
+metasocial: 
+ - facebook: "https://www.facebook.com/user"
+ - twitteruser: "@user"
+ - twitter: "https://x.com/user"
+nav_title: "11ty WISP"
+navbar: 
+ - nav: "Home" 
+   link: "/"
+ - nav: "Documentation" 
+   link: "/docs/"
+ - nav: "Blog" 
+   link: "/blog/"
+ - nav: "Contact" 
+   link: "/doc/11-help/"
+ - nav: "Search" 
+   link: "/search/"
+footer: 
+  text1: "Developed by"
+  text2: Adam DJ Brett
+  text2_link: https://adamdjbrett.com
+author: 
+ name: "Adam Dj Brett"
+ email: "info@adamdjbrett.com"
+ url: "https://adamdjbrett.com"
