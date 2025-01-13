@@ -55,6 +55,8 @@ If you need help or want to consult about your project, don’t hesitate to cont
 + Side Note Numeric Link ID with Image
 + Side Note Numeric Link ID with Video
 + Side Note Numeric Link ID with Link
++ Full Width Card
++ Small Card
 + Full Width Image
 + Small Image
 + Full Width Video
