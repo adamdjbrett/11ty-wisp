@@ -15,7 +15,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/mesinkasir/11ty-wisp.git"
+		"url": "git://github.com/adamdjbrett/11ty-wisp.git"
 	},
 	"author": {
 		"name": "Adam Dj Brett",
