@@ -1,5 +1,8 @@
 # 11ty-wisp
-Building on what I learned from building 11ty gets tufte with tufte.css, I present 11ty wisp. 
+
+![11ty-wisp](11ty-wisp.jpg)
+
+Building on what I learned from building 11ty gets tufte with tufte.css, I present 11ty wisp built from scratch.
 Pun intended :)
 
 Developer [Adam Dj Brett](https://adamdjbrett.com)
