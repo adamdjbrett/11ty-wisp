@@ -1,5 +1,5 @@
 ---
-title: Get Start
+title: Get Started
 description: Getting Started with 11ty WISP
 ---
 ### Node Download

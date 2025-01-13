@@ -10,6 +10,13 @@ Developer [Adam Dj Brett](https://adamdjbrett.com)
 If you need help or want to consult about your project, don’t hesitate to contact me.
 
 [info@adamdjbrett.com](mailto:info@adamdjbrett.com)
+----
+## CHANGELOG
+* Make the header match the background color like on [eddy](https://eddy.000000076.xyz/)
+* show a subtitle in *italics* under the title
+* Move the next and previous buttons for posts to from the header to down below
+* remove unused CSS
+* enable minify CSS, JS, and text compression
 
 ----
 
