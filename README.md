@@ -18,6 +18,7 @@ If you need help or want to consult about your project, don’t hesitate to cont
 * remove unused CSS
 * enable minify CSS, JS, and text compression
 * tab focus select needs to be more visible
+* add a disclaimer notice box as a styling option.
 
 ----
 
