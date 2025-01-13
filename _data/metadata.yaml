@@ -1,10 +1,10 @@
-title: "11ty WISP"
-description: "Project By Adam Dj Brett"
+title: "11ty WISP 🍂"
+description: "Project By Adam DJ Brett"
 favicon: "/img/fallen-leaf-noto.svg"
 image: "/img/fallen-leaf-noto.svg"
 language: "en"
 locale: "en_US"
-url: "https://wisp.000000076.xyz/"
+url: "https://wisp.000000076.xyz"
 #url: "http://localhost:8080" 
 metasocial: 
  - facebook: "https://www.facebook.com/user"

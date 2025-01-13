@@ -17,6 +17,7 @@ If you need help or want to consult about your project, don’t hesitate to cont
 * Move the next and previous buttons for posts to from the header to down below
 * remove unused CSS
 * enable minify CSS, JS, and text compression
+* tab focus select needs to be more visible
 
 ----
 
