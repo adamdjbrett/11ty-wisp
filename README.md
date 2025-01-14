@@ -12,13 +12,13 @@ If you need help or want to consult about your project, don’t hesitate to cont
 [info@adamdjbrett.com](mailto:info@adamdjbrett.com)
 ----
 ## CHANGELOG
-* Make the header match the background color like on [eddy](https://eddy.000000076.xyz/)
-* show a subtitle in *italics* under the title
-* Move the next and previous buttons for posts to from the header to down below
-* remove unused CSS
-* enable minify CSS, JS, and text compression
-* tab focus select needs to be more visible
-* add a disclaimer notice box as a styling option.
+* Make the header match the background color like on [eddy](https://eddy.000000076.xyz/) - fix
+* show a subtitle in *italics* under the title - fix
+* Move the next and previous buttons for posts to from the header to down below - fix
+* remove unused CSS - fix
+* enable minify CSS, JS, and text compression - fix
+* tab focus select needs to be more visible - fix we can change color on metadata
+* add a disclaimer notice box as a styling option. - fix we can change color on metadata
 
 ----
 
@@ -76,5 +76,7 @@ If you need help or want to consult about your project, don’t hesitate to cont
 + Dark Mode
 + Light Mode
 + Auto Mode
++ Minify CSS , JS
++ Minify Text Brotli
 + And More..
 

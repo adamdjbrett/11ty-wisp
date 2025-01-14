@@ -6,7 +6,7 @@ description: How to use Side Notes with 11ty WISP
 
 Display
 
-{% sidenotes  "Sed ultricies dolor non ante vulputate hendrerit. Vivamus sit amet suscipit sapien. Nulla iaculis eros a elit pharetra egestas.", "Example of side notes" %}
+{% sidenotes  "Sed ultricies dolor non ante vulputate hendrerit Vivamus sit amet suscipit sapien. Nulla iaculis eros a elit pharetra egestas","Example of side notes" %}
 
 Implementation
 
@@ -48,15 +48,12 @@ Example
 
 Display
 
-{% sidenotesimage  "Sed ultricies dolor non ante vulputate hendrerit. Vivamus sit amet suscipit sapien. Nulla iaculis eros a elit pharetra egestas.", "Example of side notes" ,"https://images.unsplash.com/photo-1736164446087-cb6a49da51ae?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "Example side notes with image" %}
+{% sidenotesimage  "Sed ultricies dolor non ante vulputate hendrerit Vivamus sit amet suscipit sapien Nulla iaculis eros a elit pharetra egestas.", "Example of side notes" ,"https://images.unsplash.com/photo-1736164446087-cb6a49da51ae?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "Example side notes with image" %}
 
 Implementation
 
 {% pc 'sidenotesimage "text sidenotes", "URL Image here.." , "Text Body in here..."' %}
 
-Example
-
-{% pc 'sidenotesimage  "Sed ultricies dolor non ante vulputate hendrerit. Vivamus sit amet suscipit sapien. Nulla iaculis eros a elit pharetra egestas.", "Example of side notes" , "https://tufte.000000076.xyz/img/090-Subatomic%20Particles.png" , "Example side notes with image"' %}
 
 ### Side Notes + Image +  Link
 

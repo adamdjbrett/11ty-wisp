@@ -39,6 +39,7 @@
 	},
 	"dependencies": {
 		"@picocss/pico": "^2.0.6",
-		"@zachleat/heading-anchors": "^1.0.1"
+		"@zachleat/heading-anchors": "^1.0.1",
+		"clean-css": "^5.3.3"
 	}
 }
