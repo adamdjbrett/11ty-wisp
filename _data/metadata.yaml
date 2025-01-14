@@ -5,8 +5,8 @@ image: "/img/fallen-leaf-noto.svg"
 language: "en"
 locale: "en_US"
 url: "https://wisp.000000076.xyz"
-color: primary # use secondary , primary or contrast
 #url: "http://localhost:8080" 
+color: primary # use secondary , primary or contrast
 metasocial: 
  - facebook: "https://www.facebook.com/user"
  - twitteruser: "@user"
