@@ -1,6 +1,6 @@
 ---
 title: 11ty WISP
-description: Free and open source code project by Adam Dj Brett
+description: Free and open source code project by Adam DJ Brett
 ---
 Hi and welcome in to 11ty wisp project.
 

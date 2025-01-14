@@ -5,7 +5,7 @@
 Building on what I learned from building 11ty gets tufte with tufte.css, I present 11ty wisp built from scratch.
 Pun intended :)
 
-Developer [Adam Dj Brett](https://adamdjbrett.com)
+Developer [Adam DJ Brett](https://adamdjbrett.com)
 
 If you need help or want to consult about your project, don’t hesitate to contact me.
 

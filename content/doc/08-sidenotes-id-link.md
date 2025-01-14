@@ -34,7 +34,7 @@ Example
 
 Display
 
-{% sidenotesidurlblockquote "1c",  "Sed ultricies dolor non ante vulputate hendrerit. Vivamus sit amet suscipit sapien. Nulla iaculis eros a elit pharetra egestas.", "Example of side notes" , "Example side notes with blockquote" , "Adam Dj Brett" %}
+{% sidenotesidurlblockquote "1c",  "Sed ultricies dolor non ante vulputate hendrerit. Vivamus sit amet suscipit sapien. Nulla iaculis eros a elit pharetra egestas.", "Example of side notes" , "Example side notes with blockquote" , "Adam DJ Brett" %}
 
 Implementation
 
