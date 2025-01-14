@@ -1,14 +1,14 @@
 ---
 layout: base.njk
 ---
-{% include "partials/nav_blog.njk" %}
-<main class="p-5" id="skip">
+{% include "partials/nav.njk" %}
+<main id="skip">
 <header class="container">
 <hgroup>
 <h1><a href="{{page.url}}">{{title or metadata.title}}</a></h1>
-<h2><small>{{description or metadata.description}}</small></h2>
+<h2><em>{{description or metadata.description}}</em></h2>
 </hgroup>
-</header><hr/>
+</header>
 <div class="container">
 <p>{%- for tag in tags | filterTagList %}{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
 {% if tag %}<a href="{{ tagUrl }}"><small>{{ tag }}</small></a> {%- if not loop.last %} ,{% endif %}{% endif %}	{%- endfor %}</p>
@@ -17,5 +17,6 @@ layout: base.njk
 <heading-anchors>
 {{ content | safe }}
 </heading-anchors>
+{% include "partials/pagination.njk" %}
 </div>
 </main>

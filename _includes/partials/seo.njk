@@ -28,7 +28,7 @@
 <meta name="generator" content="{{ eleventy.generator }}">
 <meta name="color-scheme" content="light dark" />
 {%- css %}{% include "node_modules/@picocss/pico/css/pico.min.css" %}{% endcss %}
-{%- css %}{% include "public/css/index.css" %}{% endcss %}
 <style>{% getBundle "css" %}</style>
 {#- <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
 {%- js %}{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}{% endjs %}
+{% include "partials/style.njk" %}

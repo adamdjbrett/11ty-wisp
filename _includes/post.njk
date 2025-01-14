@@ -1,7 +1,5 @@
 ---
 layout: blog.njk
 ---
-{%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
-{%- css %}{% include "public/css/prism-diff.css" %}{%- endcss %}
 {% if page.date %}<p><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></p>{% endif %}
 {{ content | safe }}

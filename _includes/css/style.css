@@ -1,0 +1,50 @@
+/* custom skip-to-content */
+.skip-to-content {
+	position: absolute;
+  top: -100px;
+  left: 100px;
+  background-color: #4B4E54;
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+  z-index: 999;
+  transition: top 0.3s;
+}
+.skip-to-content:focus {
+  top: 0;
+
+}
+/* pico css */
+.snts {
+  counter-reset: section;
+}
+
+.snt {
+  counter-reset: subsection;
+}
+
+.snt::before {
+  counter-increment: section;
+  content: "" counter(section);
+}
+
+.snls {
+  counter-reset: section;
+}
+.snl {
+  counter-reset: subsection;
+}
+
+.snl::before {
+  counter-increment: section;
+  content: "" counter(section);
+}
+sup {padding-right: 8px;}
+.p-5 {padding-top: 25px;}
+img {max-width:100%; padding-top: 5px;padding-bottom: 12px;}
+iframe {
+height: auto;
+width: 100%;
+aspect-ratio: 16 / 9;
+padding-top: 5px;padding-bottom: 12px;
+}
