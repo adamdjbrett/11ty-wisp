@@ -16,7 +16,7 @@
 {%- endif %}
 {%- endif %}
 {%- endif %}
-{% if pagination.href.previous %}<ul><li><a href="#" class="secondary">← Previous</a></li></ul>{% endif %}
+{% if pagination.href.previous %}<ul><li><a href="{{ pagination.href.previous }}" class="secondary">← Previous</a></li></ul>{% endif %}
 {%- if collections.posts %}
 {%- set previousPost = collections.posts | getPreviousCollectionItem %}
 {%- if nextPost or previousPost %}
@@ -49,7 +49,7 @@
 {%- endif %}
 {%- endif %}
 {%- endif %}
-{% if pagination.href.next %}<ul><li><a href="#" class="secondary">Next →</a></li></ul>{% endif %}
+{% if pagination.href.next %}<ul><li><a href="{{ pagination.href.next }}" class="secondary">Next →</a></li></ul>{% endif %}
 {%- if collections.posts %}
 {%- set nextPost = collections.posts | getNextCollectionItem %}
 {%- if nextPost or previousPost %}
