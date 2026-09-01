@@ -29,22 +29,19 @@
     "npm": ">=11.14.0"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^4.0.0-alpha.10",
     "@11ty/eleventy-navigation": "^1.0.5",
     "@11ty/eleventy-plugin-rss": "^3.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
+    "@anyblades/blades": "^3.0.0-alpha.3",
     "@awesome.me/buildawesome": "^4.0.0-alpha.10",
+    "@zachleat/heading-anchors": "^1.0.5",
+    "clean-css": "^5.3.3",
     "cross-env": "^10.1.0",
+    "js-yaml": "^5.4.1",
     "luxon": "^3.7.2",
     "pagefind": "^1.5.2",
     "zod": "^4.5.4",
     "zod-validation-error": "^5.0.0"
-  },
-  "dependencies": {
-    "@anyblades/blades": "^3.0.0-alpha.3",
-    "@zachleat/heading-anchors": "^1.0.5",
-    "clean-css": "^5.3.3",
-    "js-yaml": "^5.4.1"
   },
   "packageManager": "npm@12.0.0"
 }
