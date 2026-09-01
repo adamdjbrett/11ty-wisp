@@ -8,13 +8,13 @@ Need to download Node Js , [Download Node Here](https://nodejs.org/en/download)
 
 Download Source Code Project - [Download 11ty WISP](https://github.com/adamdjbrett/11ty-wisp/archive/refs/heads/main.zip)
 
-or Clone / Fork this Projects `git clone https://github.com/adamdjbrett/11ty-gets-tufte.git`
+or Clone / Fork this project: `git clone https://github.com/adamdjbrett/11ty-wisp.git`
 
 ### Run 11ty WISP
 
 Open your download folder and extract in to your project folder, open terminal and run this command `npm install`
 
-Next you can run this project on your local devices , run this command `npm start`
+Next, start the local development server with `npm run dev`.
 
 Now you can open `http://localhost:8080` on your web browser.
 
@@ -57,4 +57,3 @@ tags:
 ---
 Write your content article.......
 ```
-

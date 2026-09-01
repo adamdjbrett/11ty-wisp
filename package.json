@@ -4,14 +4,15 @@
   "description": "11ty Wisp by Adam DJ Brett",
   "type": "module",
   "scripts": {
-    "build": "npx @11ty/eleventy",
-    "build-nocolor": "cross-env NODE_DISABLE_COLORS=1 npx @11ty/eleventy",
-    "build-ghpages": "npx @11ty/eleventy --pathprefix=/11ty-wisp/",
-    "start": "npx @11ty/eleventy --serve --quiet",
-    "start-ghpages": "npx @11ty/eleventy --pathprefix=/11ty-wisp/ --serve --quiet",
-    "debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy",
-    "debugstart": "cross-env DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
-    "benchmark": "cross-env DEBUG=Eleventy:Benchmark* npx @11ty/eleventy"
+    "build": "buildawesome",
+    "build-nocolor": "cross-env NODE_DISABLE_COLORS=1 buildawesome",
+    "build-ghpages": "buildawesome --pathprefix=/11ty-wisp/",
+    "dev": "buildawesome --serve --quiet --port=8080",
+    "start": "npm run dev",
+    "start-ghpages": "buildawesome --pathprefix=/11ty-wisp/ --serve --quiet --port=8080",
+    "debug": "cross-env DEBUG=Eleventy* buildawesome",
+    "debugstart": "cross-env DEBUG=Eleventy* buildawesome --serve --quiet --port=8080",
+    "benchmark": "cross-env DEBUG=Eleventy:Benchmark* buildawesome"
   },
   "repository": {
     "type": "git",
@@ -28,20 +29,22 @@
     "npm": ">=11.14.0"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.6",
-    "@11ty/eleventy-img": "^5.0.0",
-    "@11ty/eleventy-navigation": "^0.3.5",
-    "@11ty/eleventy-plugin-rss": "^2.0.2",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "cross-env": "^7.0.3",
-    "luxon": "^3.5.0",
-    "zod": "^3.23.8",
-    "zod-validation-error": "^3.3.1"
+    "@11ty/eleventy": "^4.0.0-alpha.10",
+    "@11ty/eleventy-navigation": "^1.0.5",
+    "@11ty/eleventy-plugin-rss": "^3.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
+    "@awesome.me/buildawesome": "^4.0.0-alpha.10",
+    "cross-env": "^10.1.0",
+    "luxon": "^3.7.2",
+    "pagefind": "^1.5.2",
+    "zod": "^4.5.4",
+    "zod-validation-error": "^5.0.0"
   },
   "dependencies": {
-    "@picocss/pico": "^2.0.6",
-    "@zachleat/heading-anchors": "^1.0.1",
-    "clean-css": "^5.3.3"
+    "@anyblades/blades": "^3.0.0-alpha.3",
+    "@zachleat/heading-anchors": "^1.0.5",
+    "clean-css": "^5.3.3",
+    "js-yaml": "^5.4.1"
   },
-  "packageManager": "npm@11.14.0"
+  "packageManager": "npm@12.0.0"
 }

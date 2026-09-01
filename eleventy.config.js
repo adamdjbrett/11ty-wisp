@@ -2,7 +2,7 @@ import { IdAttributePlugin, InputPathToUrlTransformPlugin, HtmlBasePlugin } from
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginNavigation from "@11ty/eleventy-navigation";
-import yaml from "js-yaml";
+import { load as loadYaml } from "js-yaml";
 import CleanCSS from "clean-css";
 import { execSync } from 'child_process';
 import pluginshortCodes from "./_config/shortcode.js";
@@ -61,7 +61,7 @@ export default async function(eleventyConfig) {
 		}
 	});
 	eleventyConfig.addPlugin(pluginFilters);
-    eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
+    eleventyConfig.addDataExtension("yaml", loadYaml);
 	eleventyConfig.addPlugin(IdAttributePlugin, {
 	});
 	eleventyConfig.addShortcode("currentBuildDate", () => {

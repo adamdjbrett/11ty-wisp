@@ -35,8 +35,8 @@ If you need help or want to consult about your project, don’t hesitate to cont
 ---
 
 ## Features
-+ 11ty aka Eleventy
-+ Pico CSS
++ Build Awesome (Eleventy)
++ Blades CSS
 + Home page
 + Static Page
 + Search Pagefind
@@ -79,4 +79,3 @@ If you need help or want to consult about your project, don’t hesitate to cont
 + Minify CSS , JS
 + Minify Text Brotli
 + And More..
-
