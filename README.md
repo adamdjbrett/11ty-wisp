@@ -11,6 +11,29 @@ If you need help or want to consult about your project, don’t hesitate to cont
 
 [info@adamdjbrett.com](mailto:info@adamdjbrett.com)
 ----
+## Deploy to Cloudflare
+
+`wrangler.jsonc` serves the Eleventy output (`_site`) as Cloudflare static assets.
+
+**Cloudflare Workers Builds** (connect the repo in the dashboard):
+
+| Setting | Value |
+| --- | --- |
+| Build command | `npm run build` |
+| Deploy command | `npx wrangler deploy` |
+
+**Cloudflare Pages** (connect the repo in the dashboard):
+
+| Setting | Value |
+| --- | --- |
+| Build command | `npm run build` |
+| Build output directory | `_site` |
+
+**From your machine:** `npm run deploy` (build + `wrangler deploy`), or `npm run preview` to serve the built site locally through Workers.
+
+The Node version comes from `.nvmrc` (24), which matches the `engines.node` requirement in `package.json`. Cloudflare's build image reads `.nvmrc` before the `NODE_VERSION` environment variable, so keep the two in sync. Response headers live in `public/_headers`, which is copied to the root of `_site` during the build.
+
+----
 ## CHANGELOG
 * Make the header match the background color like on [eddy](https://eddy.000000076.xyz/) - fix
 * show a subtitle in *italics* under the title - fix

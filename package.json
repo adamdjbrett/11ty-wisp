@@ -7,6 +7,8 @@
     "build": "buildawesome",
     "build-nocolor": "cross-env NODE_DISABLE_COLORS=1 buildawesome",
     "build-ghpages": "buildawesome --pathprefix=/11ty-wisp/",
+    "deploy": "npm run build && npx wrangler deploy",
+    "preview": "npm run build && npx wrangler dev",
     "dev": "buildawesome --serve --quiet --port=8080",
     "start": "npm run dev",
     "start-ghpages": "buildawesome --pathprefix=/11ty-wisp/ --serve --quiet --port=8080",

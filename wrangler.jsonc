@@ -1,0 +1,15 @@
+{
+	// Cloudflare Workers static-assets deployment for the Eleventy build output.
+	// Build with `npm run build` (writes to _site), then `npx wrangler deploy`.
+	"name": "11ty-wisp",
+	"compatibility_date": "2026-09-02",
+	"assets": {
+		"directory": "./_site",
+		// Eleventy emits directory-style URLs (/blog/index.html), and the site
+		// links with trailing slashes — keep Cloudflare consistent with that and
+		// with the trailingSlash setting in vercel.json.
+		"html_handling": "force-trailing-slash",
+		// content/pages/404.md builds to _site/404.html
+		"not_found_handling": "404-page"
+	}
+}
