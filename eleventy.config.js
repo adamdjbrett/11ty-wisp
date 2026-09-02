@@ -1,4 +1,4 @@
-import { IdAttributePlugin, InputPathToUrlTransformPlugin, HtmlBasePlugin } from "@11ty/eleventy";
+import Eleventy, { IdAttributePlugin, InputPathToUrlTransformPlugin, HtmlBasePlugin } from "@11ty/eleventy";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginNavigation from "@11ty/eleventy-navigation";
@@ -10,6 +10,7 @@ import pluginFilters from "./_config/filters.js";
 import fs from "fs";
 import zlib from "zlib";
 export default async function(eleventyConfig) {
+	eleventyConfig.addGlobalData("siteGenerator", `Eleventy (Build Awesome) v${Eleventy.getVersion()}`);
 	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
 		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
 			return false;
