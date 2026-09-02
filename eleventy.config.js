@@ -36,7 +36,7 @@ export default async function(eleventyConfig) {
 	eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
 	eleventyConfig.addPlugin(pluginshortCodes);
     eleventyConfig.addFilter("cssmin", function (code) {return new CleanCSS({}).minify(code).styles;});
-	eleventyConfig.on('eleventy.after', () => {execSync(`npx pagefind --site _site --glob \"**/*.html\"`, { encoding: 'utf-8' })})
+	eleventyConfig.on('eleventy.after', () => {execSync(`npx --no-install pagefind --site _site --glob \"**/*.html\"`, { encoding: 'utf-8' })})
 	eleventyConfig.addPlugin(feedPlugin, {
 		type: "atom", // or "rss", "json"
 		outputPath: "/feed/feed.xml",
