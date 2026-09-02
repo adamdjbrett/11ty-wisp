@@ -30,7 +30,7 @@ The site deploys to **Cloudflare Workers static assets**. `wrangler.jsonc` serve
 
 ### Everyday use
 
-Pushes to `main` deploy automatically. Locally, `npm run deploy` builds and runs `wrangler deploy`, and `npm run preview` serves the built site through Workers. Both call `npx wrangler`, which fetches wrangler on demand; to pin it in the project, run `npm i -D wrangler` and commit the updated `package-lock.json`. CI already pins the major through the action's `wranglerVersion`.
+Pushes to `main` deploy automatically. Locally, `npm run deploy` builds and runs `wrangler deploy`, and `npm run preview` serves the built site through Workers. Both call `npx wrangler@4`, pinned to the same major the CI action uses so local and deployed behaviour cannot drift. To install it into the project instead, run `npm i -D wrangler` and commit the updated `package-lock.json` — `npx` will then use the local copy as long as it satisfies the pin.
 
 ### Notes
 
