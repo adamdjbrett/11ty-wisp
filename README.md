@@ -15,23 +15,33 @@ If you need help or want to consult about your project, don’t hesitate to cont
 
 `wrangler.jsonc` serves the Eleventy output (`_site`) as Cloudflare static assets.
 
-**Cloudflare Workers Builds** (connect the repo in the dashboard):
+### GitHub Actions (default)
 
-| Setting | Value |
+`.github/workflows/deploy.yml` builds on every pull request and deploys pushes to `main`. Add two repository secrets under **Settings → Secrets and variables → Actions**:
+
+| Secret | Where to get it |
 | --- | --- |
-| Build command | `npm run build` |
-| Deploy command | `npx wrangler deploy` |
+| `CLOUDFLARE_API_TOKEN` | Cloudflare dashboard → My Profile → API Tokens → Create Token, using the **Edit Cloudflare Workers** template |
+| `CLOUDFLARE_ACCOUNT_ID` | Cloudflare dashboard → Workers & Pages → Account ID |
 
-**Cloudflare Pages** (connect the repo in the dashboard):
+Pull requests only build, so a fork PR can never deploy or reach the secrets.
 
-| Setting | Value |
-| --- | --- |
-| Build command | `npm run build` |
-| Build output directory | `_site` |
+### Cloudflare's own build system (alternative)
 
-**From your machine:** `npm run deploy` (build + `wrangler deploy`), or `npm run preview` to serve the built site locally through Workers.
+Connect the repo in the dashboard instead of using Actions:
 
-The Node version comes from `.nvmrc` (24), which matches the `engines.node` requirement in `package.json`. Cloudflare's build image reads `.nvmrc` before the `NODE_VERSION` environment variable, so keep the two in sync. Response headers live in `public/_headers`, which is copied to the root of `_site` during the build.
+| | Workers Builds | Pages |
+| --- | --- | --- |
+| Build command | `npm run build` | `npm run build` |
+| Output | `npx wrangler deploy` (deploy command) | `_site` (build output directory) |
+
+### From your machine
+
+`npm run deploy` builds and runs `wrangler deploy`; `npm run preview` serves the built site locally through Workers. Both call `npx wrangler`, which fetches wrangler on demand. To pin it instead, run `npm i -D wrangler` and commit the updated `package-lock.json` — CI already pins the major through the action's `wranglerVersion`.
+
+### Notes
+
+The Node version comes from `.nvmrc` (24), which matches `engines.node` in `package.json`. Cloudflare's build image and `actions/setup-node` both read `.nvmrc`, so keep it in sync with `engines`. Response headers live in `public/_headers`, copied to the root of `_site` during the build.
 
 ----
 ## CHANGELOG
