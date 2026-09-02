@@ -13,35 +13,28 @@ If you need help or want to consult about your project, don’t hesitate to cont
 ----
 ## Deploy to Cloudflare
 
-`wrangler.jsonc` serves the Eleventy output (`_site`) as Cloudflare static assets.
+The site deploys to **Cloudflare Workers static assets**. `wrangler.jsonc` serves the Eleventy output (`_site`), and `.github/workflows/deploy.yml` builds on every pull request and deploys pushes to `main`.
 
-### GitHub Actions (default)
+### One-time setup
 
-`.github/workflows/deploy.yml` builds on every pull request and deploys pushes to `main`. Add two repository secrets under **Settings → Secrets and variables → Actions**:
+1. **Add the repository secrets** under *Settings → Secrets and variables → Actions*:
 
-| Secret | Where to get it |
-| --- | --- |
-| `CLOUDFLARE_API_TOKEN` | Cloudflare dashboard → My Profile → API Tokens → Create Token, using the **Edit Cloudflare Workers** template |
-| `CLOUDFLARE_ACCOUNT_ID` | Cloudflare dashboard → Workers & Pages → Account ID |
+   | Secret | Where to get it |
+   | --- | --- |
+   | `CLOUDFLARE_API_TOKEN` | Cloudflare → My Profile → API Tokens → Create Token → **Edit Cloudflare Workers** template |
+   | `CLOUDFLARE_ACCOUNT_ID` | Cloudflare → Workers & Pages → Account ID |
 
-Pull requests only build, so a fork PR can never deploy or reach the secrets.
+2. **Retire the old Pages project.** This repo was previously wired to a Cloudflare *Pages* project also named `11ty-wisp`, whose builds were failing. Pages and Workers are separate products, so leaving both connected deploys the site twice. In the dashboard, open the Pages project → *Settings → Builds* and disconnect the Git integration (or delete the project).
 
-### Cloudflare's own build system (alternative)
+3. **Move the custom domain.** `wisp.000000076.xyz` points at the Pages project. Remove it from Pages *first* — Cloudflare will not let two projects claim the same hostname — then add it to the Worker under *Workers & Pages → 11ty-wisp → Settings → Domains & Routes*. Until then the Worker is reachable at `11ty-wisp.<your-subdomain>.workers.dev`.
 
-Connect the repo in the dashboard instead of using Actions:
+### Everyday use
 
-| | Workers Builds | Pages |
-| --- | --- | --- |
-| Build command | `npm run build` | `npm run build` |
-| Output | `npx wrangler deploy` (deploy command) | `_site` (build output directory) |
-
-### From your machine
-
-`npm run deploy` builds and runs `wrangler deploy`; `npm run preview` serves the built site locally through Workers. Both call `npx wrangler`, which fetches wrangler on demand. To pin it instead, run `npm i -D wrangler` and commit the updated `package-lock.json` — CI already pins the major through the action's `wranglerVersion`.
+Pushes to `main` deploy automatically. Locally, `npm run deploy` builds and runs `wrangler deploy`, and `npm run preview` serves the built site through Workers. Both call `npx wrangler`, which fetches wrangler on demand; to pin it in the project, run `npm i -D wrangler` and commit the updated `package-lock.json`. CI already pins the major through the action's `wranglerVersion`.
 
 ### Notes
 
-The Node version comes from `.nvmrc` (24), which matches `engines.node` in `package.json`. Cloudflare's build image and `actions/setup-node` both read `.nvmrc`, so keep it in sync with `engines`. Response headers live in `public/_headers`, copied to the root of `_site` during the build.
+The Node version comes from `.nvmrc` (24), which matches `engines.node` in `package.json`. Both Cloudflare's build image and `actions/setup-node` read `.nvmrc`, so keep it in sync with `engines` — a mismatch here is what broke the previous deployments. Response headers live in `public/_headers`, copied to the root of `_site` during the build.
 
 ----
 ## CHANGELOG
